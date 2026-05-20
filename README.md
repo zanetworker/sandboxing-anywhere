@@ -9,8 +9,18 @@ Agent sandboxing experiments across providers and entrypoints. Each directory is
 | Directory | What | Sandbox Provider | Agent Framework |
 |-----------|------|-----------------|-----------------|
 | `openshell-agents-sdk/` | OpenShell + OpenAI Agents SDK | [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) | [OpenAI Agents Python SDK](https://github.com/openai/openai-agents-python) |
-| `openshell-ogx/` | OpenShell + OGX (Llama Stack) | [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) | [OGX](https://github.com/ogx-ai/ogx) Containers API + Responses API |
+| `openshell-agents-sdk-self-hosted/` | OpenShell + self-hosted vLLM (fully air-gapped) | [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) | OpenAI Agents SDK + vLLM on GPU cluster |
+| `openshell-ogx/` | OpenShell + OGX (Llama Stack) | [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) | [OGX](https://github.com/ogx-ai/ogx) Containers API + Responses API (**PR**) |
 | `anthropic-self-hosted/` | OpenShell + Anthropic Self-Hosted Sandboxes | [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) | [Anthropic `ant` CLI](https://github.com/anthropics/anthropic-cli) (Managed Agents, self-hosted) |
+
+## Related PRs and Issues
+
+| Link | Status | Description |
+|------|--------|-------------|
+| [ogx-ai/ogx#5853](https://github.com/ogx-ai/ogx/pull/5853) | Open PR | Containers API + Docker provider + `remote::openshell` provider |
+| [ogx-ai/ogx#5852](https://github.com/ogx-ai/ogx/issues/5852) | Open Issue | Containers API feature request |
+| [openai/openai-agents-python#3469](https://github.com/openai/openai-agents-python/pull/3469) | Open PR | OpenShell sandbox extension for the OpenAI Agents SDK |
+| [RHAIRFE-1538](https://redhat.atlassian.net/browse/RHAIRFE-1538) | Stakeholder Review | Sandboxed Containers API and Shell Tool for Agent Code Execution |
 
 ## Planned
 

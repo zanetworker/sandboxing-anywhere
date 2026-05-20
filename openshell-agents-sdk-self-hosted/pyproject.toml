@@ -1,0 +1,9 @@
+[project]
+name = "openshell-agents-sdk-self-hosted"
+version = "0.1.0"
+description = "Fully self-hosted agent sandbox: OpenShell + vLLM on GPU cluster"
+requires-python = ">=3.10"
+dependencies = [
+    "openai-agents[openshell]",
+    "openshell>=0.0.0a0",
+]
