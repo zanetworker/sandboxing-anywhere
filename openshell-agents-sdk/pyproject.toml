@@ -1,0 +1,9 @@
+[project]
+name = "openshell-agents-sdk-example"
+version = "0.1.0"
+description = "OpenShell + OpenAI Agents SDK sandbox integration examples"
+requires-python = ">=3.10"
+dependencies = [
+    "openai-agents[openshell]",
+    "openshell>=0.0.0a0",
+]
