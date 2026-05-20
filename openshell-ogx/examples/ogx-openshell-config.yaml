@@ -1,0 +1,59 @@
+# Minimal OGX config with OpenShell containers provider.
+#
+# Usage:
+#   uv run ogx run examples/ogx-openshell-config.yaml
+#
+# Prerequisites:
+#   - OpenShell gateway running (openshell gateway list)
+#   - pip install openshell grpcio
+#   - OPENAI_API_KEY set (for inference provider)
+#
+# Adjust gateway_endpoint to match your OpenShell gateway address.
+# Run `openshell gateway list` to find the endpoint.
+
+version: 2
+apis:
+- containers
+- inference
+- responses
+- files
+- tool_runtime
+distro_name: openshell-starter
+providers:
+  containers:
+  - provider_id: openshell-containers
+    provider_type: remote::openshell
+    config:
+      gateway_endpoint: "127.0.0.1:18080"
+      ready_timeout_seconds: 120.0
+      grpc_timeout: 30.0
+      metadata_store:
+        table_name: openshell_containers_metadata
+        backend: sql_default
+  inference:
+  - provider_id: openai
+    provider_type: remote::openai
+    config:
+      api_key: ${env.OPENAI_API_KEY:}
+  responses:
+  - provider_id: builtin
+    provider_type: inline::builtin
+    config:
+      sqlstore:
+        backend: sql_default
+        table_name: responses
+  files:
+  - provider_id: builtin-files
+    provider_type: inline::localfs
+    config:
+      storage_dir: ${env.FILES_STORAGE_DIR:~/.ogx/distributions/openshell-starter/files}
+      metadata_store:
+        backend: sql_default
+        table_name: files_metadata
+  tool_runtime:
+  - provider_id: rag-runtime
+    provider_type: inline::rag-runtime
+    config: {}
+sql_store:
+  type: sqlite
+  db_path: ${env.SQLITE_STORE_DIR:~/.ogx/distributions/openshell-starter}/sql_store.db

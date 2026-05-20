@@ -10,11 +10,11 @@ Agent sandboxing experiments across providers and entrypoints. Each directory is
 |-----------|------|-----------------|-----------------|
 | `openshell-agents-sdk/` | OpenShell + OpenAI Agents SDK | [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) | [OpenAI Agents Python SDK](https://github.com/openai/openai-agents-python) |
 | `openshell-ogx/` | OpenShell + OGX (Llama Stack) | [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) | [OGX](https://github.com/ogx-ai/ogx) Containers API + Responses API |
+| `anthropic-self-hosted/` | OpenShell + Anthropic Self-Hosted Sandboxes | [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) | [Anthropic `ant` CLI](https://github.com/anthropics/anthropic-cli) (Managed Agents, self-hosted) |
 
 ## Planned
 
 - `openai-containers-api/` -- OpenAI Responses API with Containers API (hosted sandboxes)
-- `anthropic-self-hosted/` -- Anthropic Claude with self-hosted sandbox execution
 - `openshell-mcp/` -- OpenShell sandboxes exposed as MCP tools
 - `openshell-llama-stack/` -- OpenShell + Llama Stack agents (native API, not OpenAI-compat)
 
