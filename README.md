@@ -19,6 +19,7 @@ Agent sandboxing experiments across providers and entrypoints. Each directory is
 |------|--------|-------------|
 | [ogx-ai/ogx#5853](https://github.com/ogx-ai/ogx/pull/5853) | Open PR | Containers API + Docker provider + `remote::openshell` provider |
 | [ogx-ai/ogx#5852](https://github.com/ogx-ai/ogx/issues/5852) | Open Issue | Containers API feature request |
+| [openai/openai-agents-python#3468](https://github.com/openai/openai-agents-python/issues/3468) | Open Issue | Feature request: add OpenShell sandbox provider |
 | [openai/openai-agents-python#3469](https://github.com/openai/openai-agents-python/pull/3469) | Open PR | OpenShell sandbox extension for the OpenAI Agents SDK |
 | [RHAIRFE-1538](https://redhat.atlassian.net/browse/RHAIRFE-1538) | Stakeholder Review | Sandboxed Containers API and Shell Tool for Agent Code Execution |
 
