@@ -12,6 +12,7 @@ Agent sandboxing experiments across providers and entrypoints. Each directory is
 | `openshell-agents-sdk-self-hosted/` | OpenShell + self-hosted vLLM (fully air-gapped) | [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) | OpenAI Agents SDK + vLLM on GPU cluster |
 | `openshell-ogx/` | OpenShell + OGX (Llama Stack) | [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) | [OGX](https://github.com/ogx-ai/ogx) Containers API + Responses API (**PR**) |
 | `anthropic-self-hosted/` | OpenShell + Anthropic Self-Hosted Sandboxes | [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) | [Anthropic `ant` CLI](https://github.com/anthropics/anthropic-cli) (Managed Agents, self-hosted) |
+| `supervisor-pattern/` | Multi-agent supervisor: brain decomposes, each agent reasons with vLLM inside its own OpenShell sandbox with per-agent network policy | [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) | Claude Managed Agents (brain) + vLLM/Qwen3-8B (sandboxed local agents) |
 
 ## Related PRs and Issues
 
